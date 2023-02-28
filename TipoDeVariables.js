@@ -17,3 +17,33 @@ var objeto  = {
 }
 
 console.log(objeto)
+
+
+//dato vuleano (True, False)
+
+var genero = false;
+console.log(typeof genero)
+
+
+//funcion
+function miFuncion(){}
+console.log(typeof miFuncion);
+
+
+//clase
+class persona{
+    constructor(nombre,apellido){
+        //hacemos referencia al nombre y apellido 
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+}
+console.log(typeof persona);
+
+
+
+//undefined
+
+var hola;
+
+console.log(typeof hola)
