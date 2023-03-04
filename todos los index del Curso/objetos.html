@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var persona ={
+        nombre:"Jarison Stived",
+        apellido:"Cespedes",
+        edad:18,
+        ciudad:"Colombia",
+        email:"Jarimices@gmail.com",
+        nombrecompleto: function(){
+            return this.nombre + " " + this.apellido;
+
+        
+        }
+        
+    }
+    //para agregar informacion al objeto
+    persona.telefono ="54545454"
+    //eliminar propiedad
+    delete persona.telefono;
+    //para todos
+    console.log(persona)
+    //para uno en especifico
+    alert(persona.edad)
+    //////para llamar a la funcion
+    console.log(persona.nombrecompleto()) 
+    
+</script>
+
+<script>
+    var motos ={
+        marca:"Susuki",
+        color:"Azul",
+        modelo:"2023",
+        get nombreMotos(){
+            return this.modelo + " " + this.marca;
+
+        
+        }
+    }
+    console.log(motos.nombreMotos)
+   
+</script>
+</html>

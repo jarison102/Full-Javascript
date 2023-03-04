@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class persones {
+        constructor(nombre, apellido) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+
+        }
+    }
+    var persones1 = new persones("Jarison", "Cespedes");
+    alert(persones1.nombre + " " + persones1.apellido)
+
+    var persones3 = new persones("Paula", "Cespedes");
+    console.log(persones3)
+
+    //"get" se utiliza para obtener el valor de una propiedad y 
+    //"set" se utiliza para asignar un valor a una propiedad.
+    //Ambos métodos se utilizan en conjunción con una propiedad, a la que se le llama "propiedad de acceso".
+</script>
+
+
+
+</html>
+
+<script>
+    class persona {
+        constructor(nombres, apellidos) {
+            this.nombres;
+            this.apellidos;
+
+        }
+        get nombre() {
+            return this.nombres
+        }
+
+
+        set nombre(nombres) {
+            this.nombres = nombres;
+        }
+        /////////////////////////////
+        get apellido() {
+            return this.apellidos
+        }
+
+
+        set apellidos(apellidos) {
+            this.apellidos = apellidos;
+        }
+
+    }
+
+    class empleado extends persona {
+        constructor(nombres, apellidos, id, cel, email, pais) {
+            super(nombres, apellidos);//llamar al constructor de la clase padre
+            this.id = id
+            this.cel = cel
+            this.email = email
+            this.pais = pais
+
+        }
+        //que departamento tiene dicho empleado
+        get departamento() {
+            return this.departamento;
+        }
+        //para poder alterarlo
+        set departamento(departamento) {
+            this.departamento = departamento
+        }
+    }
+    let persona2 = new empleado("Peli", "canyer", 10, 4554455454,"peli@gmail.com", "Colombia");
+    console.log(persona2);
+
+
+
+</script>
