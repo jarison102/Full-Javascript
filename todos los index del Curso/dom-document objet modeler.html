@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="cabecera">ejemplo dom con javaScritp</h3>
+    <p id="parrafo">parrafo manipulacion del dom</p>
+    <p id="moto">Gixxer sf 250</p>
+    <h1 id="moto2">r15</h1>
+    <h2 class="pantalla2">me :3 sirve</h2>
+
+</body>
+<script>
+    //dom document objet moduler
+    //el getelementbyid es obtiene el elemento por el id
+    //el innerhtml extrae lo que contiene el html
+    let cabecera = document.getElementById("cabecera").innerHTML;
+    let moto = document.getElementById("moto").innerHTML;
+    let parrafo = document.getElementById("parrafo").innerHTML;
+    let moto2 = document.getElementsByTagName("h1")
+    let pantalla2 = document.getElementsByClassName("pantalla2");
+
+    //para modificar el html en javascript
+    moto.innerHTML = "nueva cadena de texto moto";
+    console.log(cabecera);
+    console.log(parrafo);
+    console.log(moto);
+    console.log(moto2);
+    console.log(pantalla2);
+    for (let i = 0; i < pantalla2.length; i++) {
+        console.log(pantalla2[i].innerHTML)
+
+    }
+    for (let i = 0; i < moto2.length; i++) {
+        console.log(moto2[i].innerHTML)
+
+    }
+</script>
+
+
+
+</html>
