@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formulario">
+        Nombre<input type="text" name="nombre" value="Jarison Stived">
+        <br>
+        Apellido<input type="text" name="apellido" value="Mican cespedes">
+        <br>
+    </form>
+    <button onclick="mostrarValores()">mostrar</button>
+    <div id="valores"></div>
+    <h1>cual moto</h1>
+    <script>
+        function mostrarValores() {
+            let formulario = document.forms["formulario"];
+            let texto = "";
+            for (let elemento of formulario) {
+                texto += elemento.value + "<br/>";
+
+            }
+            document.getElementById("valores").innerHTML = texto;
+        }
+    </script>
+
+    <form id="formularioMotos">
+        Color <input type="text" name="Color" value="rojo">
+        <br>
+        Marca <input type="text" name="Marca" value="susuki">
+        <br>
+        Valores <input type="text" name="Valores" value="80000">
+        <br>
+    </form>
+    <button onclick="MostrarResultados()">Mostrar resultados</button>
+    <div id="valores2"></div>
+    <script>
+        //otra forma de capturar resultados
+        function MostrarResultados() {
+
+
+            let formularioMotos = document.forms["formularioMotos"]
+            let texto = "";
+            let color = formularioMotos["Color"];
+            let marca = formularioMotos["Marca"];
+            let valores = formularioMotos["Valores"];
+            texto = color.value + "<br/>" + marca.value + "<br/>" + valores.value;
+            document.getElementById("valores2").innerHTML = texto;
+        }
+    </script>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1 id="titulo">mostrar dom</h1>
+        <button onclick="mostrar()">mostrar cambios</button>
+        <script>
+            function mostrar() {
+                document.getElementById("titulo").innerHTML = "hola feos";
+            }
+        </script>
+    </body>
+    <body>
+        <h1 id="titulo">holaaaa cambio de imagenes</h1>
+        <img id="js" src="./imagenes eventos/js.png">
+        
+        <button onclick="mostrar_imagenes()">Mostrar img</button>
+        <script>
+            function mostrar_imagenes() {
+                document.getElementById("js").src = "./imagenes eventos/python.png";
+                document.getElementById("titulo").style.color = "red";
+            }
+    
+        </script>
+    </body>
+
+    </html>
+</body>
+
