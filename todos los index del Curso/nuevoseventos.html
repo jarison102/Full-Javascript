@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 onclick="mostraJ(this)">hola feo</h1>
+    <a href="formularios.html">
+        <button>
+            Anterior pagina
+        </button>
+    </a>
+
+    <br>
+    <a href="onchange.html">
+        <button>
+            Siguente  pagina
+        </button>
+    </a>
+    <script>
+        function mostraJ(titulo) {
+            titulo.innerHTML = "nuevo titulo"
+
+        }
+    </script>
+</body>
+
+<body onload="myFunction()">
+
+    <h2 id="titulo2">titulo2</h2>
+    <div id="mostrar"></div>
+    <script>
+        function myFunction() {
+            alert("Bienvenido a la pagina")
+            let texto = "";
+            if (navigator.cookieEnabled) {
+                texto = "las cookies estan activadas";
+
+            } else {
+                texto = "las cookies no estan activadas";
+            }
+            document.getElementById("mostrar").innerHTML = texto;
+        }
+        
+    </script>
+</body>
+
+
+</html>

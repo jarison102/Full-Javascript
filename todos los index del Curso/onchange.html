@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //el onmouseover es cuando el mause esta encima se activa y el onmouseout es cuando no esta encima
+    </script>
+    <h1 onmouseover="rojo(this)" onmouseout="azul(this)">prueba de eventos</h1>
+    <input type="text" onchange="convertir(this)">
+    <script>
+        function convertir(nombreImput){
+            nombreImput.value= nombreImput.value.toUpperCase();
+        }
+    </script>
+    <script>
+        function rojo(titulo){
+            titulo.style.color="red";
+
+        }
+        function azul(titulo){
+            titulo.style.color="blue";
+
+}
+    </script>
+    <script>
+        //el rojo es cuando no estas clickeando el titulo y el azul es cuando se ejecuta la funcion
+    </script>
+    <h1 onmousedown="rojo(this)" onmouseup="azul(this)">prueba de eventos</h1>
+    <input type="text" onchange="convertir(this)">
+    <script>
+        function convertir(nombreImput){
+            nombreImput.value= nombreImput.value.toUpperCase();
+        }
+    </script>
+    <script>
+        function rojo(titulo){
+            titulo.style.color="red";
+
+        }
+        function azul(titulo){
+            titulo.style.color="blue";
+
+}
+    </script>
+    <h1 onmouseover="rojo(this)" onmouseout="azul(this)">prueba de blur onfocus</h1>
+    <input type="text" onfocus="rojo(this)" onblur="azul(this)">
+
+    <script>
+        function rojo(titule){
+            titule.style.background="red";
+
+        }
+        function azul(titule){
+            titule.style.background="blue";
+
+}
+    </script>
+</body>
+</html>
